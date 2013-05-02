@@ -8,7 +8,7 @@ if u'SVN' in version:
     version = ' '.join(version.split(' ')[:-1])
 
 setup(
-    name = 'Django Colors',
+    name = 'django-colors',
     version = version.replace(' ', '-'),
     description = 'Manipulate colors with django',
     packages = [
