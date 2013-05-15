@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-
-
-import setuptools
 from distutils.core import setup
 import os, sys
 
@@ -11,15 +8,24 @@ if u'SVN' in version:
     version = ' '.join(version.split(' ')[:-1])
 
 setup(
-    name = 'Django Colors',
+    name = 'django-colors',
     version = version.replace(' ', '-'),
     description = 'Manipulate colors with django',
+    packages = [
+        'colors',
+        'colors.templatetags'
+    ],
+    package_data={
+        'colors': [
+            'static/colors/js/*.js',
+            'static/colors/css/*.css',
+            'static/colors/images/*.png',
+            'static/colors/images/*.gif',
+            'templates/colors/*.html'
+        ],
+    },
     author = 'Maxime Haineault',
     author_email = 'max@motion-m.ca',
-#   cmdclass = cmdclasses,
-#   data_files = data_files,
     url = 'http://code.google.com/p/django-colors/',
-    packages = ['colors'],
-    include_package_data=True,
 )
 
