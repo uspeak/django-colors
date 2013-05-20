@@ -1,8 +1,9 @@
 .color-picker-preview {
     border:1px solid #ccc;
     height:23px;
-    left:122px;
-    position:absolute;
+    left:5px;
+    position: relative;
+    display: inline-block;
     top:0;
     width:23px;
     -moz-border-radius:4px;
@@ -10,7 +11,8 @@
 .color-picker-preview div {
     height:19px;
     left:2px;
-    position:absolute;
+    position: relative;
+    display: inline-block;
     top:2px;
     width:19px;
     -moz-border-radius:2px;
@@ -188,4 +190,8 @@
 }
 .colorpicker_slider {
 	background-position: bottom;
+}
+
+#id_color{
+	cursor: pointer;
 }
